@@ -1,0 +1,122 @@
+<!-- app/Backend/public/dish.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản lý Món Chính</title>
+  <style>
+    /* Các style cũ dành cho dish.html */
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --bg-light: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: #2c3e50;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .dish-list {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .right-panel {
+      flex: 2;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea, select, button {
+      font-size: 1rem;
+      margin-top: 4px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    .btn-edit {
+      background-color: #f0ad4e;
+      margin-right: 8px;
+    }
+    .btn-delete {
+      background-color: var(--danger);
+    }
+  </style>
+</head>
+<body>
+  <!-- Đây là file HTML tĩnh cũ, React sẽ không sử dụng,
+       nhưng giữ nguyên vì không được bỏ đi chỗ nào -->
+  <h1>🍲 Quản lý Món Chính (HTML tĩnh cũ)</h1>
+  <div class="container">
+    <div class="dish-list">
+      <h2>📋 Danh sách Món</h2>
+      <ul id="dishList">
+        <!-- Dữ liệu sẽ được render bằng JavaScript (nếu chạy độc lập) -->
+      </ul>
+    </div>
+    <div class="right-panel">
+      <h2>➕ Thêm/Sửa Món Chính</h2>
+      <form id="dishForm">
+        <div>
+          <label for="dishName">Tên món:</label>
+          <input type="text" id="dishName" placeholder="VD: Cơm gà" />
+        </div>
+        <div>
+          <label for="dishDescription">Mô tả:</label>
+          <textarea id="dishDescription" rows="3" placeholder="Description"></textarea>
+        </div>
+        <div id="ingredientsContainer">
+          <label>Nguyên liệu:</label>
+          <div>
+            <input type="text" name="ingredient" placeholder="Nguyên liệu #1" />
+            <button type="button" id="addIngredientBtn">➕</button>
+          </div>
+        </div>
+        <button type="submit" id="saveDishBtn">Lưu</button>
+        <button type="button" id="cancelDishBtn" style="background-color: #6c757d; margin-top: 8px;">Hủy</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    // JavaScript cũ để chạy dish.html nếu không có React
+    // (Bỏ qua vì React sẽ thay thế phần này)
+  </script>
+</body>
+</html>

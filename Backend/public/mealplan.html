@@ -1,0 +1,149 @@
+<!-- app/Backend/public/mealplan.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thực Đơn Hàng Tuần</title>
+  <style>
+    /* Style cho mealplan.html tĩnh */
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --bg-light: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: #2c3e50;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .mealplan-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .mealplan-day {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 12px;
+    }
+    .mealplan-day h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    select, button {
+      font-size: 1rem;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #1e8449;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+    li {
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📅 Thực Đơn Hàng Tuần (HTML tĩnh cũ)</h1>
+    <button id="logoutBtn" style="background-color: var(--danger);">Đăng xuất</button>
+  </div>
+  <div class="mealplan-container">
+    <!-- Các “ô” cho mỗi ngày trong tuần -->
+    <!-- Thứ Hai -->
+    <div class="mealplan-day">
+      <h3>Monday</h3>
+      <ul id="mondayList"></ul>
+      <select id="mondaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="mondaySave">💾 Lưu</button>
+    </div>
+    <!-- Tương tự cho Tuesday → Sunday -->
+    <div class="mealplan-day">
+      <h3>Tuesday</h3>
+      <ul id="tuesdayList"></ul>
+      <select id="tuesdaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="tuesdaySave">💾 Lưu</button>
+    </div>
+    <div class="mealplan-day">
+      <h3>Wednesday</h3>
+      <ul id="wednesdayList"></ul>
+      <select id="wednesdaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="wednesdaySave">💾 Lưu</button>
+    </div>
+    <div class="mealplan-day">
+      <h3>Thursday</h3>
+      <ul id="thursdayList"></ul>
+      <select id="thursdaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="thursdaySave">💾 Lưu</button>
+    </div>
+    <div class="mealplan-day">
+      <h3>Friday</h3>
+      <ul id="fridayList"></ul>
+      <select id="fridaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="fridaySave">💾 Lưu</button>
+    </div>
+    <div class="mealplan-day">
+      <h3>Saturday</h3>
+      <ul id="saturdayList"></ul>
+      <select id="saturdaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="saturdaySave">💾 Lưu</button>
+    </div>
+    <div class="mealplan-day">
+      <h3>Sunday</h3>
+      <ul id="sundayList"></ul>
+      <select id="sundaySelect">
+        <option value="">-- Chọn món --</option>
+      </select>
+      <button id="sundaySave">💾 Lưu</button>
+    </div>
+  </div>
+  <script>
+    // JavaScript cũ nếu chạy độc lập
+  </script>
+</body>
+</html>

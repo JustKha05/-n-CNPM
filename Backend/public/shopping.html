@@ -1,0 +1,108 @@
+<!-- app/Backend/public/shopping.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Danh sách Mua sắm</title>
+  <style>
+    /* Style cho shopping.html tĩnh */
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --bg-light: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: #2c3e50;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    input, select, button {
+      font-size: 1rem;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .danger-icon {
+      color: var(--danger);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🛒 Danh sách Mua sắm (HTML tĩnh cũ)</h1>
+    <button id="logoutBtn" style="background-color: var(--danger);">Đăng xuất</button>
+  </div>
+  <div class="card">
+    <h2>➕ Thêm vào danh sách mua sắm</h2>
+    <form id="shoppingForm">
+      <div>
+        <label>Chọn món ăn:</label>
+        <select id="shoppingSelect">
+          <!-- Options load bằng JS -->
+        </select>
+      </div>
+      <div style="display: flex; gap: 12px; margin-top: 12px;">
+        <div style="flex: 1;">
+          <label>Đơn vị:</label>
+          <input type="text" id="shoppingUnit" readonly />
+        </div>
+        <div style="flex: 1;">
+          <label>Số lượng:</label>
+          <input type="number" id="shoppingQuantity" placeholder="Số lượng" />
+        </div>
+      </div>
+      <button type="submit" style="margin-top: 12px; width: 100%;">Thêm vào mua sắm</button>
+    </form>
+  </div>
+  <div class="card">
+    <h2>📋 Món đã thêm</h2>
+    <ul id="shoppingList">
+      <!-- Render shopping list bằng JS -->
+    </ul>
+  </div>
+  <script>
+    // JavaScript cũ nếu chạy độc lập
+  </script>
+</body>
+</html>

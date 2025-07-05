@@ -1,0 +1,90 @@
+<!-- app/Backend/public/login.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đăng nhập</title>
+  <style>
+    /* Style cho login.html tĩnh */
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --bg-light: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: #2c3e50;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .auth-container {
+      max-width: 400px;
+      margin: 60px auto 0;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .auth-container form > div {
+      margin-bottom: 16px;
+    }
+    input, button {
+      font-size: 1rem;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    p {
+      margin-top: 8px;
+      text-align: center;
+    }
+    .danger-text {
+      color: var(--danger);
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>🔐 Đăng nhập (HTML tĩnh cũ)</h2>
+    <form id="loginForm">
+      <div>
+        <label>Email:</label>
+        <input type="email" id="loginEmail" placeholder="Email" />
+      </div>
+      <div>
+        <label>Mật khẩu:</label>
+        <input type="password" id="loginPassword" placeholder="Mật khẩu" />
+      </div>
+      <button type="submit" style="margin-top: 12px;">Đăng nhập</button>
+    </form>
+    <p id="loginError" class="danger-text"></p>
+    <p>
+      Chưa có tài khoản? 
+      <a href="register.html" style="color: var(--primary);">Đăng ký ngay</a>
+    </p>
+  </div>
+  <script>
+    // JavaScript cũ nếu chạy độc lập
+  </script>
+</body>
+</html>

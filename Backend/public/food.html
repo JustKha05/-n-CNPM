@@ -1,0 +1,101 @@
+<!-- app/Backend/public/food.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản lý Món Ăn</title>
+  <style>
+    /* Style tương tự đã dùng trong Home và FoodManager React */
+    :root {
+      --primary: #3498db;
+      --danger: #e74c3c;
+      --bg-light: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: #2c3e50;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    input, select, button {
+      font-size: 1rem;
+      margin-top: 4px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn-edit {
+      background-color: #f0ad4e;
+      margin-right: 8px;
+    }
+    .btn-delete {
+      background-color: var(--danger);
+    }
+  </style>
+</head>
+<body>
+  <h1>🍽️ Danh sách Món Ăn (HTML tĩnh cũ)</h1>
+  <div class="card">
+    <h2>📋 Danh sách Món ăn</h2>
+    <ul id="foodList">
+      <!-- Dữ liệu đổ lên bằng JS nếu chạy độc lập -->
+    </ul>
+  </div>
+  <div class="card">
+    <h2>➕ Thêm món ăn</h2>
+    <form id="foodForm">
+      <div>
+        <label for="foodName">Tên món ăn:</label>
+        <input type="text" id="foodName" placeholder="VD: Bánh mì" />
+      </div>
+      <div>
+        <label for="foodCalories">Calories:</label>
+        <input type="number" id="foodCalories" placeholder="VD: 250" />
+      </div>
+      <div>
+        <label for="foodUnit">Đơn vị:</label>
+        <input type="text" id="foodUnit" placeholder="VD: g, cái, phần..." />
+      </div>
+      <button type="submit" id="saveFoodBtn">Thêm món</button>
+    </form>
+  </div>
+  <script>
+    // JavaScript cũ nếu chạy độc lập
+  </script>
+</body>
+</html>
